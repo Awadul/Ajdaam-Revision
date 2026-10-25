@@ -183,3 +183,49 @@ h1 { animation: none; }
 .machinery-video { background:#14120f; } .machinery-video iframe { display:block; width:100%; height:100%; border:0; }
 
 .machinery-video video { display:block; width:100%; height:100%; object-fit:contain; background:#14120f; }
+
+.product-carousel { min-width: 0; }
+.product-carousel-heading { display:flex; align-items:baseline; justify-content:space-between; gap:16px; }
+.product-carousel-heading h3 { font-size:30px; }
+.product-carousel-heading > span { font-size:10px; color:#595959; }
+.product-carousel-stage { --radius:230px; --preview-width:230px; height:380px; position:relative; overflow:hidden; perspective:1100px; touch-action:pan-y; cursor:grab; }
+.product-carousel-stage:active { cursor:grabbing; }
+.product-carousel-ring { position:absolute; width:var(--preview-width); height:300px; left:50%; top:40px; margin-left:calc(var(--preview-width) / -2); transform-style:preserve-3d; transform:translateZ(calc(-1 * var(--radius))) rotateY(var(--rotation)); transition:transform 650ms cubic-bezier(.22,.68,.2,1); }
+.product-preview { position:absolute; inset:0; background:#f5f5f3; backface-visibility:hidden; transform:rotateY(var(--card-angle)) translateZ(var(--radius)); overflow:hidden; }
+.product-preview-image { position:relative; height:230px; }
+.product-preview-image img { object-fit:cover; object-position:55% 50%; user-select:none; pointer-events:none; }
+.product-preview-caption { padding:13px 16px; }
+.product-preview-caption span { color:#595959; font-size:10px; }
+.product-preview-caption p { font-family:var(--font-cormorant),serif; font-size:24px; margin-top:2px; }
+.product-carousel-controls { display:flex; justify-content:center; align-items:center; gap:20px; }
+.product-carousel-controls .btn { min-width:46px; padding:10px; }
+.product-carousel-controls p { font-size:11px; min-width:85px; text-align:center; font-variant-numeric:tabular-nums; }
+.product-carousel-note { font-size:11px; line-height:1.7; color:#595959; margin:18px auto 0; max-width:48ch; text-align:center; }
+@media(max-width:760px) { .product-carousel-stage { --radius:160px; --preview-width:200px; height:330px; }.product-carousel-ring { height:270px; top:30px; }.product-preview-image { height:200px; }.product-carousel-heading h3 { font-size:28px; } }
+@media(prefers-reduced-motion:reduce) { .product-carousel-ring { transform:none; transition:none; }.product-preview { transform:none; }.product-preview[data-active="false"] { display:none; } }
+
+/* Wide cylindrical gallery follows the supplied visual reference. */
+.sanitary-content { grid-template-columns:1fr; gap:64px; }
+.product-carousel { width:100%; }
+.product-carousel-heading { margin-bottom:24px; }
+.product-carousel-stage { --radius:510px; --preview-width:205px; height:440px; perspective:2400px; background:transparent; }
+.product-carousel-ring { height:240px; top:100px; }
+.product-preview { border-radius:16px; background:#ddd8ce; backface-visibility:visible; }
+.product-preview-image { height:100%; }
+.product-preview-caption { display:none; }
+.product-carousel-controls { margin-top:20px; }
+.product-carousel-note { max-width:66ch; }
+.sanitary-copy { max-width:720px; }
+@media(max-width:760px) {
+ .sanitary-content { gap:40px; }
+ .product-carousel-stage { --radius:340px; --preview-width:135px; height:320px; perspective:1800px; }
+ .product-carousel-ring { height:185px; top:67px; }
+ .product-preview-image { height:100%; }
+ .product-preview { border-radius:12px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .product-carousel-ring { transform:none; }
+ .product-preview { transform:none; }
+ .product-preview[data-active="false"] { display:none; }
+}
+
