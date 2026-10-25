@@ -44,3 +44,13 @@ Documentation and asset preservation only. No dependencies, hooks, runtime confi
 
 
 Latest refinement: read REVISION-2.md for the independent revision-1 critique and neutral palette/motion changes. Current preview remains http://127.0.0.1:3100.
+
+Latest motion pass: read REVISION-3.md. Hero/chapter motion and engineering hover/focus previews with click/tap pinning are now implemented; preserve reduced-motion and native disclosure semantics.
+
+Latest polish: REVISION-4.md documents smooth measured disclosure height, hover intent and single selected domain. No parallax added; do not confuse viewport entrances with parallax.
+
+Latest polish: REVISION-5.md. Keyboard focus now overrides old pins; hover respects focused domains. Small desktop photographic parallax implemented with named CSS view timelines; stationary fallback on narrow/coarse/reduced-motion/unsupported setups.
+
+Latest: REVISION-6.md supersedes prior engine-unavailable status: Impeccable 4.7.0 context and manual scan now work. Hook configured enabled but not active automatically this session. Hero uses separate 1536x1024 assets with object-fit:cover, image-only 3px/720ms blur settling and ±12px photo parallax. If an incremental build emits stale CSS, clear only generated .next and rebuild.
+
+Hero sequence update: intro fades for 600ms. Each hero photo waits for decode and 12% viewport intersection, then fades/lightly clears blur over 800ms; data-hero-state progresses fading -> ready. Parallax gain stays zero during entrance and blends to one over 360ms afterward. Browser verified fading photo had gain0/zero translation; both settled ready/gain1/opacity1. Build/lint/manual detector pass. Reduced-motion skips entrance and depth. Existing no-JS/default visible content is preserved.

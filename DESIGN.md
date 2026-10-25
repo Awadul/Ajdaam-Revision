@@ -52,3 +52,7 @@ Clean rectangular image areas and restrained control shapes. Exact corner values
 Use neutral catalogue lighting alongside atmospheric photography. Avoid theatrical machining sparks, vague prestige claims and invented credentials. Keep type and contrast readable; verify the real UI before calling it polished.
 
 User-directed refinement (2026-10-25): white (#FFFFFF) is now the main canvas, light neutral (#F5F5F3) the enquiry surface, charcoal the engineering chapter and footer. Saffron remains the logo/accent and brief-download action; header Enquire is dark and division links are understated. This supersedes the earlier ivory canvas guidance. Bounded CSS image/menu/disclosure motion replaces decorative loops; retain reduced-motion handling.
+
+Photographic depth refinement: bounded -12px to +12px motion inside fixed clipped photo frames is permitted on supported desktop fine-pointer devices with no reduced-motion preference. Text, labels, controls and engineering domains remain free of parallax. Preserve still fallbacks.
+
+Confirmed hero refinement: separate proportion-preserving responsive photographs, not a stretched diptych. User selected a light image-only blur-to-clear entrance (3px, 720ms), replacing the old clip reveal. Headings and actions remain sharp and stationary. Preserve bounded scroll-linked photographic depth and reduced-motion still fallback.
